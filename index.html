@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Movs</title>
+
+
+</head>
+
+<body>
+    
+    <nav class="sliderbar">
+        <ul class="ul2">
+          
+            <li ><a href="#" data-type='now_playing' class="animate__animated animate__slideInUp ">Now playing</a></li>
+            <li><a href="#" data-type='popular'class="animate__animated animate__slideInUp ">Popular</a></li>
+            <li><a href="#" data-type='top_rated' class="animate__animated animate__slideInUp ">Top Rated</a></li>
+            <li><a  href="#" data-type='top_rated' class="animate__animated animate__slideInUp" >Top Rated</a></li>
+
+            <li><a  href="#" data-type='upcoming' class="animate__animated animate__slideInUp">Upcoming</a></li>
+            <li><a  href="#contact" data-type='Contact Us' class="animate__animated animate__slideInUp">Contact Us</a></li>
+        </ul>
+        <button class="sliderbtn">
+            <div class="row">
+                  
+                <img src="logo.png" alt="" class="img-fliud ">
+                <span></span>
+                <i class="fa-solid fa-globe one"></i>
+                <i class="fa-solid fa-share-nodes two"></i>
+            </div>
+        </button>
+    </nav>
+
+    <section class="container" >
+        <div class="container p-5 ">
+            <input type="text" oninput="searchmov(this.value)" class="form-control m-auto rounded-pill w-50 bg-black border border-light py-2 text-light" placeholder="Search">
+        </div>
+            <div class="row row2 g-5">
+               
+            </div>
+       
+    </section>
+
+
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-white  my-5">Contact Us</h1>
+              
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <input type="text" name="name" placeholder="Enter Your Name "  class="w-100 bg-transparent name   my-2 p-2" oninput="checkName()">
+                    <p id="pname"  class="text-danger d-none">Invalid Name , only Characters allowed</p>
+
+                    <input type="phone" name="phone" placeholder="Enter Your Phone" class="w-100 bg-transparent phone  my-2 p-2"  oninput="checkphone()">
+                    <p id="phone"  class="text-danger d-none">Invalid Phone Number</p>
+
+                    <input type="password" name="password" placeholder="Enter Your Password" class="w-100 bg-transparent pass  my-2 p-2"  oninput="checkpass()">
+                    <p id="pass"  class="text-danger d-none">password must contain numbers & letters at least 8 character</p>
+
+                    
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <input type="email" name="email" placeholder="Enter Your Email" class="w-100 bg-transparent email  my-2 p-2"  oninput="checkemail()">
+                    <p id="email"  class="text-danger d-none">Invalid Email , try example@domain.com</p>
+
+                    <input type="number" name="agw" placeholder="Enter Your Age" class="w-100 bg-transparent age  my-2 p-2"  oninput="checkage()">
+                    <p id="age"  class="text-danger d-none">Your age must be over 16+</p>
+
+                    <input type="password" name="repassword" placeholder="ReEnter Your Password" class="w-100 repass bg-transparent   my-2 p-2"  oninput="checkrepass()">
+                    <p id="repass"  class="text-danger d-none">you soso</p>
+
+                </div>
+                <input class="btn btn-dark text-white text-center W-20 h-auto m-3" value="Submit">
+              
+           
+           
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

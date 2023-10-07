@@ -1,0 +1,234 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     box-sizing: border-box;
+    background: rgb(13,13,13);
+  
+}
+
+.sliderbar{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: #262626;
+    width: 250px;
+    height:100vh;
+    transition: 0.3s;
+   z-index: 222;
+}
+
+
+.active{
+    left: 0;
+}
+ul{
+    margin: 0;
+    padding: 20px 0;
+   
+ 
+}
+ul li{
+    list-style: none;
+    display: none;
+}
+ul li a{
+    padding: 10px 20px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+}
+.sliderbtn{
+    position: absolute;
+    top: 0;
+     display: flex;
+     justify-content: center;
+     align-items: self-start;
+    right: -50px;
+    width: 50px;
+    
+    height: 100vh;
+    box-sizing: border-box;
+   
+    background-color:rgb(248,246,246);
+    border: none;
+
+}
+.sliderbtn img{
+    margin-top: 50px;
+
+   
+}
+.sliderbtn span{
+ display: block;
+ cursor: pointer;
+ width: 25px;
+ height: 2px;
+margin: auto;
+ background-color:black;
+ position: absolute;
+ top: 50%;
+ left: 13px;
+ transition: .3s;
+}
+.sliderbtn .one{
+    position: absolute;
+    top: 80%;
+}
+.sliderbtn .two{
+    position: absolute;
+    top: 83%;
+}
+
+
+
+.sliderbtn span::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color:black;
+    transition: .3s;
+}
+.sliderbtn span::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color:black;
+    transition: .3s;
+}
+.sliderbtn.toggle span{
+    background-color: transparent;
+}
+.sliderbtn.toggle span:before{
+   top:0;
+    transform: rotate(45deg);
+}
+.sliderbtn.toggle span::after{
+  top:0;
+    transform: rotate(130deg);
+}
+
+
+.row2 img{
+    width: 100%;
+    height: 80vh;
+    transition: all 1s ease-in-out;
+}
+
+
+
+input{
+  
+    border:0px 0px 2px 0px #fff solid !important;
+}
+input::placeholder{
+    text-align: center;
+}
+.W-20{
+    width: 15%;
+}
+
+.btn:hover{
+  background-color: #fff;
+  color: #262626 !important;
+}
+
+.divimg{
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+
+
+.overlay{
+    position: absolute;
+  border-radius: 10px;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.4s ease-in-out;
+    top: 0;
+   border-radius: 10px;
+    cursor: pointer;
+   
+    
+}
+
+.overlay .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.8) ;
+    transform: translate(-50%,-50%);
+    color: #fff;
+  
+  padding: 10%;
+}
+.divimg img{
+    border-radius: 10px;
+    
+}
+.divimg:hover .overlay{
+    opacity: 0.8;
+
+}
+.divimg:hover img{
+    transform:scale(1.2) rotate(5deg)
+}
+.divimg .fa-star{
+    color: gold;
+}
+input{
+    color: #fff;
+}
+
+.animate__slideOutLeft {
+    -webkit-animation-name: slideOutLeft;
+    animation-name: slideOutLeft;
+}
+.animate__fadeInDown {
+    -webkit-animation-name: slideOutLeft;
+    animation-name:fadeInDown;
+}
+
+.overlay:hover .divcon{
+    animation-duration: 0.5s;
+    animation-name: slidein;
+}
+
+
+.overlay:hover h2{
+    animation-duration: 0.5s;
+    animation-name: slideinh;
+}
+
+
+@keyframes slidein {
+    from{
+        margin-top:50%;
+    }
+    to{
+        margin-top:0%;
+    }
+}
+
+@keyframes slideinh {
+    from{
+        margin-left:50%;
+    }
+    to{
+        margin-left:0%;
+    }
+}
